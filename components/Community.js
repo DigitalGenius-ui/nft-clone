@@ -86,6 +86,14 @@ const Container = styled.div`
     left: 2rem;
     width: 11rem;
     top: -5rem;
+    @media(max-width : 950px){
+    width: 9rem;
+    left: 0;
+    }
+    @media(max-width : 415px){
+    width: 8rem;
+    left: 0;
+    }
   }
   
 `
@@ -94,15 +102,27 @@ const Img = styled.img`
   right: 0;
   width: 9rem;
   top: -4rem;
+  @media(max-width : 950px){
+    width: 6rem;
+  }
+  @media(max-width : 415px){
+    width: 5rem;
+    }
 `
 const Content = styled.div`
   width: 75%;
   margin: 0 auto;
+  @media(max-width : 985px){
+    width: 85%;
+  }
   h1{
     font-family: 'Nunito', sans-serif;
     text-align: center;
     padding-bottom: 2rem;
     text-transform: uppercase;
+    @media(max-width : 390px){
+    font-size: 1.5rem;
+    }
     span{
       color: #F12D5E;
     }

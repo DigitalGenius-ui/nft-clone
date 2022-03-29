@@ -16,11 +16,12 @@ export default function Nft() {
         <h1>NFT's</h1>
         <p>3333 unique nfts will be available upon launch using solana network. The price will be 0.25 SOL per NFT on launch.</p>
     </Texts>
+      <Slider>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={"3"}
+        slidesPerView={"auto"}
         navigation={true}
         modules={[EffectCoverflow, Navigation]}
         coverflowEffect={{
@@ -43,6 +44,7 @@ export default function Nft() {
           <Imag src="https://res.cloudinary.com/ghazni/image/upload/v1648192609/nft-clone/slide1_txnns7.png" alt="slider"/>
         </SwiperSlide>
       </Swiper>
+      </Slider>
       <button>MINT NOW</button>
     </Container>
   );
@@ -68,12 +70,22 @@ top: -2rem;
 .swiper {
   width: 75%;
   padding-top: 50px;
-  margin: 0 auto;
-  background-color: transparent;
-  text-align: center;
+  padding-bottom: 50px;
+  @media(max-width : 490px){
+    width: 100%;
+  }
 }
+
 .swiper-slide {
-  padding: 0;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
 .swiper-3d .swiper-slide-shadow-left, 
 .swiper-slide-shadow-right{
@@ -84,12 +96,18 @@ top: -2rem;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
+  @media(max-width : 800px){
+    display: none;
+  }
 }
 .swiper-button-prev {
   background-image: url("https://res.cloudinary.com/ghazni/image/upload/v1648207429/nft-clone/leftarrow_jcih09.png");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
+  @media(max-width : 800px){
+    display: none;
+  }
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -115,6 +133,15 @@ button{
   }
 
 `
+const Slider = styled.div`
+  /* width: 55rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden; */
+`
 const Texts = styled.div`
 text-align: center;
   h1{
@@ -131,6 +158,9 @@ text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
     padding: 0.5rem 0;
+    @media(max-width : 760px){
+      width: 90%;
+    }
   }
 `
 const Imag = styled.img`
@@ -141,4 +171,14 @@ const Image = styled.img`
   left: 0;
   width: 13rem;
   top: -4rem;
+  @media(max-width : 1130px){
+    width: 10rem;
+  }
+  @media(max-width : 890px){
+    width: 8rem;
+  }
+  @media(max-width : 430px){
+    width: 6rem;
+    top: -2rem;
+  }
 `

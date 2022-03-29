@@ -44,7 +44,7 @@ const Flex = styled.div`
     padding-bottom: 5rem;
     width: 90%;
     margin: 0 auto;
-    @media(max-width : 800px){
+    @media(max-width : 880px){
         flex-direction: column;
     }
 `
@@ -56,9 +56,26 @@ const Texts = styled.div`
         font-weight: 700;
         letter-spacing: 0.2rem;
         margin-top: -0.8rem;
+        @media(max-width : 570px){
+            font-size: 3rem;
+            padding: 0.5rem 0;
+        }
+        @media(max-width : 480px){
+            font-size: 2.5rem;
+        }
+        @media(max-width : 415px){
+            font-size: 2rem;
+            font-weight: 900;
+        }
     }
     p{
         width: 29rem;
+    @media(max-width : 880px){
+        width: 100%;
+    }
+    @media(max-width : 570px){
+            width : 90%;
+    }
     }
     h2{
         font-family: 'Poppins', sans-serif;
@@ -68,6 +85,12 @@ const Texts = styled.div`
 `
 const Image = styled.img`
     width: 19rem;
+    @media(max-width : 570px){
+        width: 16rem;
+    }
+    @media(max-width : 480px){
+        width: 13rem;
+    }
 `
 const Slider = styled.div`
     flex: 1;

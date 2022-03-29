@@ -54,6 +54,9 @@ const Img = styled.img`
   right: 0;
   width: 14rem;
   top: -4rem;
+  @media(max-width : 650px){
+        width: 10rem;
+    }
 `
 
 const Cotents = styled.div`
@@ -61,12 +64,23 @@ const Cotents = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 5rem 0rem 4rem 4rem ;
+    @media(max-width : 880px){
+        flex-direction: column;
+    }
+    @media(max-width : 880px){
+        padding: 3rem 0;
+        width: 90%;
+        margin: 0 auto;
+    }
 `
 const Texts = styled.div`
     h1{
         font-family: 'Nunito', sans-serif;
         font-weight: 700;
         font-size: 2.7rem;
+        @media(max-width : 460px){
+            font-size: 2.2rem;
+        }
     }
     p{
         margin: 1rem 0;
@@ -92,4 +106,16 @@ const Texts = styled.div`
 `
 const Imag = styled.img`
     width: 34rem;
+    @media(max-width : 1020px){
+        width: 30rem;
+    }
+    @media(max-width : 940px){
+        width: 28rem;
+    }
+    @media(max-width : 880px){
+        width: 34rem;
+    }
+    @media(max-width : 612px){
+        width: 100%;
+    }
 `

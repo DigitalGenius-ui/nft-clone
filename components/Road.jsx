@@ -73,10 +73,27 @@ const Container = styled.div`
     left: 0;
     width: 6rem;
     top: -4rem;
+    @media(max-width : 820px){
+    width: 4rem;
+    }
   }
 `
 const RoadMap = styled.div`
     position: relative;
+    @media(max-width : 620px){
+        width: 30%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2rem;
+    }
+    @media(max-width : 564px){
+        width: 35%;
+    }
+    @media(max-width : 485px){
+        width: 40%;
+    }
     div{
         width: 13rem;
         padding: 0.5rem;
@@ -87,6 +104,16 @@ const RoadMap = styled.div`
         font-size: 0.9rem;
         font-family: "Ubuntu" sans-serif;
         padding: 0.5rem 1rem;
+        @media(max-width : 800px){
+            font-size: 0.8rem;
+        }
+        @media(max-width : 620px){
+            font-size: 0.7rem;
+        }
+        @media(max-width : 485px){
+            font-size: 0.6rem;
+            padding: 0.5rem 0.5rem;
+        }
         :nth-child(2){
             top: 2rem;
             right:-10rem;
@@ -94,6 +121,15 @@ const RoadMap = styled.div`
             color: #FE9700;
             text-align: center;
             width: 13.5rem;
+            @media(max-width : 620px){
+                right:-6rem;
+                width: 11rem;
+            }
+            @media(max-width : 424px){
+                right:-4rem;
+                width: 90%;
+                padding: 0.5rem 0.5rem;
+            }
         }
         :nth-child(3){
             top: 8.5rem;
@@ -102,6 +138,14 @@ const RoadMap = styled.div`
             color: #25C5D9;
             text-align: center;
             width: 11rem;
+            @media(max-width : 620px){
+                width: 9rem;
+                left: -3.5rem;
+            }
+            @media(max-width : 424px){
+                width: 65%;
+                left: -1.5rem;
+            }
         }
         :nth-child(4){
             top: 14.5rem;
@@ -109,6 +153,14 @@ const RoadMap = styled.div`
             box-shadow: 0px 0px 0px 1px #42A4F5;
             color: #42A4F5;
             width: 15rem;
+            @media(max-width : 620px){
+                right:-7rem;
+                width: 12rem;
+            }
+            @media(max-width : 424px){
+                width: 75%;
+                right:-3rem;
+            }
         }
     }
     ul{
@@ -120,6 +172,12 @@ const RoadMap = styled.div`
         font-weight: 400;
         font-size: 0.9rem;
         font-family: "Ubuntu" sans-serif;
+        @media(max-width : 800px){
+            font-size: 0.8rem;
+        }
+        @media(max-width : 485px){
+            font-size: 0.6rem;
+        }
     }
     .list{
         top: 20.5rem;
@@ -128,6 +186,16 @@ const RoadMap = styled.div`
         color: #EB407A;
         width: 15rem;
         padding: 0.5rem 2rem;
+        @media(max-width : 620px){
+            left:-7rem;
+            width: 12rem;
+            padding: 1rem 1.5rem;
+        }
+        @media(max-width : 424px){
+            width: 100%;
+            left:-4.5rem;
+            padding: 0.5rem 1rem;
+        }
     }
     .list2{
         top: 26rem;
@@ -136,21 +204,60 @@ const RoadMap = styled.div`
         color: #5D5FEF;
         width: 22rem;
         padding: 0.5rem 2rem;
+        @media(max-width : 800px){
+            width: 20rem;
+            right:-18.5rem;
+        }
+        @media(max-width : 745px){
+            width: 17rem;
+            right:-14.5rem;
+            padding: 0.5rem 1rem;
+        }
+        @media(max-width : 620px){
+            font-size: 0.7rem;
+            width: 13rem;
+            right:-10.5rem;
+        }
+        @media(max-width : 620px){
+            right:-9rem;
+        }
+        @media(max-width : 485px){
+            width: 10rem;
+            right:-6.5rem;
+        }
+        @media(max-width : 424px){
+            width: 100%;
+            right:-5rem;
+            top: 28rem;
+            padding: 0.5rem 1rem;
+        }
     }
 `
 const Image = styled.img`
     width: 8rem;
     margin-top: 2rem;
+    
 `
 const Img = styled.img`
   position: absolute;
   right: 0;
   width: 8rem;
   top: -5rem;
+  @media(max-width : 820px){
+    width: 6rem;
+}
 `
 const Stone = styled.img`
     position: absolute;
     top: 32%;
     left: 18%;
     width: 10rem;
+    @media(max-width : 820px){
+        width: 8rem;
+    }
+    @media(max-width : 480px){
+        width: 6rem;
+        top: 40%;
+        left: 15%;
+    }
 `

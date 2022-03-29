@@ -24,9 +24,9 @@ export default function Home() {
           <Nft/>
           <Road/>
           <Option/>
-          <Questions/>
-          <Social/>
-          <Footer/>
+          {/* <Questions/> */}
+          {/* <Social/> */}
+          {/* <Footer/> */}
       </Container>      
   )
 }

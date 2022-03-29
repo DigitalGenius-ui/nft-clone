@@ -77,9 +77,22 @@ export default function SwipSlider() {
 }
 
 const Container = styled.div`
-  .swiper {
+.swiper {
   width: 300px;
   height: 400px;
+  @media(max-width : 430px){
+    width: 260px;
+    height: 370px;
+    margin-right: 3rem;
+  }
+  @media(max-width : 390px){
+    width: 240px;
+    height: 340px;
+    margin-right: 3rem;
+  }
+  @media(max-width : 360px){
+    margin-right: 2rem;
+  }
 }
 
 .swiper-slide {
@@ -91,7 +104,6 @@ const Container = styled.div`
   background-color: black;
 }
 `
-
 const Image = styled.img`
   width: 100%;
 `

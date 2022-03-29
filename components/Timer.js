@@ -81,7 +81,10 @@ const Time = styled(Container)`
 
 const Image = styled.img`
     position: absolute;
-    right: 5rem;
+    left: 21rem;
     top : 2.5rem;
     width: 9rem;
+    @media(max-width : 540px){
+        display : none;
+    }
 `
