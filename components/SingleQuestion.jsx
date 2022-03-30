@@ -1,24 +1,27 @@
 import React, {useState} from 'react';
 import { FaMinus, FaPlus } from 'react-icons/fa';
+import { Fade } from 'react-reveal';
 import styled from 'styled-components';
 
 const SingleQuestion = ({question}) => {
     const { color, title, disc } = question;
     const [open, setOpen] = useState(false)
   return (
-    <Container style={{boxShadow: `0px 0px 0px 1px #${color}`}}>
-        <Head>
-        <h2 style={{color:`#${color}`}}>{title}</h2>
-        <span onClick={() => setOpen(!open)}>
-        {open? 
-        <FaMinus style={{color : `#${color}`}}/> : 
-        <FaPlus style={{color : `#${color}`}}/>}
-        </span>
-        </Head>
-        <Body open={open}>
-        <p>{disc}</p>
-        </Body>
-    </Container>
+    <Fade bottom>
+        <Container style={{boxShadow: `0px 0px 0px 1px #${color}`}}>
+            <Head>
+            <h2 style={{color:`#${color}`}}>{title}</h2>
+            <span onClick={() => setOpen(!open)}>
+            {open? 
+            <FaMinus style={{color : `#${color}`}}/> : 
+            <FaPlus style={{color : `#${color}`}}/>}
+            </span>
+            </Head>
+            <Body open={open}>
+            <p>{disc}</p>
+            </Body>
+        </Container>
+    </Fade>
   )
 }
 
@@ -53,5 +56,8 @@ const Body = styled.div`
         width: 48rem;
         font-size: 0.9rem;
         padding-top: 1rem;
+        @media(max-width : 950px){
+        width: 100%;
+        }
     }
 `

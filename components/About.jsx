@@ -1,32 +1,47 @@
 import React from 'react';
+import { Fade, Zoom } from 'react-reveal';
+import Tada from 'react-reveal/Tada';
+import LightSpeed from 'react-reveal/LightSpeed';
 import styled from 'styled-components';
 
 const About = () => {
   return (
     <Container>
         <div className='shadow'></div>
-        <Img src={"https://res.cloudinary.com/ghazni/image/upload/v1648192601/nft-clone/fire_umu0ut.png"}alt="earth"/>
-      <Img className='stone__planet'
-      src={"https://res.cloudinary.com/ghazni/image/upload/v1648192603/nft-clone/moon_dvuycy.png"}alt="stone-planet"/>
+        <Fade><Img src={"https://res.cloudinary.com/ghazni/image/upload/v1648192601/nft-clone/fire_umu0ut.png"}alt="earth"/></Fade>
+        <Fade>
+        <Img className='stone__planet'
+        src={"https://res.cloudinary.com/ghazni/image/upload/v1648192603/nft-clone/moon_dvuycy.png"}alt="stone-planet"/>
+        </Fade>
         <Cotents>
-            <Texts>
-                <h1>About The GBaby</h1>
-                <p>The Gaby project was initiated in the last quarter of 2021 as we experienced a tremendous support towards the 
-                    project with a vision of helping children in need around the world.The collection 
-                    is a hand drawn and algorithmically minted digital piece of art. 
-                    The GBaby NFTs are powered and stored on the Solana blockchain forever. 
-                    There is only room for 3,333 unique Solana Baby Gagsters.
-                </p>
-                <p>When you mint a GBaby NFT, you’re not just buying an avatar or a rare piece of digital art. 
-                    You are enrolling to special cash prizes in Solana and supporting Children in need of help around the world. 
-                    Your GBaby can serve as your digital identity, and open digital doors for you in the Solana 
-                    Metaverse that can increase over time.
-                </p>
-                <button>Price 0.25 SOL</button>
-                <button>Amount 3333</button>
-            </Texts>
-            <Imag src="https://res.cloudinary.com/ghazni/image/upload/v1648192602/nft-clone/about_m23r6w.png"
-            alt="foto"/>
+                <Texts>
+                    <Zoom>
+                        <h1>About The GBaby</h1>
+                    </Zoom>
+                <Fade left>
+                    <p>The Gaby project was initiated in the last quarter of 2021 as we experienced a tremendous support towards the 
+                        project with a vision of helping children in need around the world.The collection 
+                        is a hand drawn and algorithmically minted digital piece of art. 
+                        The GBaby NFTs are powered and stored on the Solana blockchain forever. 
+                        There is only room for 3,333 unique Solana Baby Gagsters.
+                    </p>
+                    <p>When you mint a GBaby NFT, you’re not just buying an avatar or a rare piece of digital art. 
+                        You are enrolling to special cash prizes in Solana and supporting Children in need of help around the world. 
+                        Your GBaby can serve as your digital identity, and open digital doors for you in the Solana 
+                        Metaverse that can increase over time.
+                    </p>
+                </Fade>
+                    <LightSpeed>
+                        <button>Price 0.25 SOL</button>
+                    </LightSpeed>
+                    <LightSpeed>
+                        <button>Amount 3333</button>
+                    </LightSpeed>
+                </Texts>
+            <Tada>
+                <Imag src="https://res.cloudinary.com/ghazni/image/upload/v1648192602/nft-clone/about_m23r6w.png"
+                alt="foto"/>
+            </Tada>
         </Cotents>
     </Container>
   )

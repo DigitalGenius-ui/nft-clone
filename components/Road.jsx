@@ -1,4 +1,6 @@
 import React from 'react'
+import { Fade, Flip } from 'react-reveal';
+import Tada from 'react-reveal/Tada';
 import styled from 'styled-components';
 
 const Road = () => {
@@ -10,32 +12,44 @@ const Road = () => {
         src={"https://res.cloudinary.com/ghazni/image/upload/v1648192605/nft-clone/road-stone_pggacl.png"}alt="stone"/>
         <Img src={"https://res.cloudinary.com/ghazni/image/upload/v1648192605/nft-clone/road-moon_ild4r4.png"}alt="road-planet"/>
         <Stone src="https://res.cloudinary.com/ghazni/image/upload/v1648192607/nft-clone/road-stone2_qbkivt.png" alt="stone"/>
+        <Flip>
         <h1>ROAD MAP</h1>
+        </Flip>
             <RoadMap>
                 <Image 
                 src="https://res.cloudinary.com/ghazni/image/upload/v1648192604/nft-clone/road-line_xsudkk.png" 
                 alt="road"/>
+                <Tada>
                 <div>
                     <p> Work with our artists to get 
                     GangsterBaby collection out</p>
                 </div>
+                </Tada>
+                <Tada>
                 <div>
                 <p>Website, Discord and 
                 community growth</p>
                 </div>
+                </Tada>
+                <Tada>
                 <div>
                     <p>GangsterBaby Marketing, Community engagement, voting and collaborations</p>
                 </div>
+                </Tada>
+            <Tada>
             <ul className='list'>
                 <li> Launch Mint</li>
                 <li>After mint Create holder chat on discord to help holders vote on direction</li>
             </ul>
+            </Tada>
+            <Tada>
             <ul className='list2'>
                 <li>A chance to get free Airdrop on our next collection.</li>
                 <li>Implement Ideas from holders. </li>
                 <li>Giveaway at least 60 Sol in donations to a charity of choice (Through Vote).</li>
                 <li>Fun contests on Discord to win cash prizes.</li>
             </ul>
+            </Tada>
             </RoadMap>
     </Container>
   )

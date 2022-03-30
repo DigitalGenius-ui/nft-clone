@@ -2,19 +2,28 @@ import React from 'react'
 import styled from 'styled-components';
 import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
 import { IoLogoGameControllerB } from 'react-icons/io'
+import { Flip, Zoom } from 'react-reveal';
 
 const Social = () => {
   return (
     <Container>
       <Media>
-        <h1>Join our community</h1>
+        <Flip>
+          <h1>Join our community</h1>
+        </Flip>
           <Icons>
+            <Zoom>
             <div><AiOutlineInstagram/></div>
+            </Zoom>
+            <Zoom>
             <div><IoLogoGameControllerB/></div>
-            <div><AiOutlineTwitter/></div>
+            </Zoom>
+            <Zoom><div><AiOutlineTwitter/></div></Zoom>
           </Icons>
       </Media>
-        <Imag src="https://res.cloudinary.com/ghazni/image/upload/v1648192603/nft-clone/join_jvhmwn.png" alt="foto"/>
+        <Zoom>
+          <Imag src="https://res.cloudinary.com/ghazni/image/upload/v1648192603/nft-clone/join_jvhmwn.png" alt="foto"/>
+        </Zoom>
     </Container>
   )
 }
@@ -30,6 +39,12 @@ const Container = styled.div`
   padding: 4rem;
   position: relative;
   height: 400px;
+  @media(max-width : 950px){
+    padding: 4rem 2rem;
+  }
+  @media(max-width : 620px){
+      flex-direction: column;
+  }
 `
 const Media = styled.div`
   h1{
@@ -37,6 +52,15 @@ const Media = styled.div`
     font-family: 'Nunito', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
+    @media(max-width : 730px){
+      font-size: 1.7rem;
+    }
+    @media(max-width : 620px){
+     padding-bottom: 1rem ;
+    }
+    @media(max-width : 390px){
+      font-size: 1.5rem;
+    }
   }
 
 `
@@ -44,6 +68,11 @@ const Icons = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  @media(max-width : 620px){
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
   div{
     font-size: 1.2rem;
     width: 2rem;
@@ -58,4 +87,10 @@ const Icons = styled.div`
 `
 const Imag = styled.img`
   width: 19rem;
+  @media(max-width : 950px){
+    width: 17rem;
+  }
+  @media(max-width : 730px){
+    width: 15rem;
+  }
 `

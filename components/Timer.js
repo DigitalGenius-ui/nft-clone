@@ -1,6 +1,12 @@
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components';
+import { motion } from "framer-motion";
 
+const animations = {
+    initial : {opacity : 0,},
+    animate : {opacity : 1},
+    exit : {opacity : 0,},
+}
 
 const Timer = () => {
     const [second, setSecond] = useState("00");
@@ -52,8 +58,15 @@ const Timer = () => {
             <h1>{getZero(second)}</h1>
             <h4>Second</h4>
         </Time>
+        <motion.div 
+            variants= {animations}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{duration : 1, delay : 1.4}}>
         <Image 
         src="https://res.cloudinary.com/ghazni/image/upload/v1648192604/nft-clone/comming_ezsprl.png" alt="coming"/>
+        </motion.div>
     </Container>
   )
 }

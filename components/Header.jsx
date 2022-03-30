@@ -1,14 +1,37 @@
 import React, {useState} from 'react'
 import styled from 'styled-components';
+import {motion} from 'framer-motion';
+
+const animations = {
+    initial : {opacity : 0, x :-20},
+    animate : {opacity : 1, x : 0},
+    exit : {opacity : 0, x : 20},
+    secondInitial : {opacity : 0, x :20},
+    secondAnimate : {opacity : 1, x : 0},
+    secondExit : {opacity : 0, x : -20}
+}
 
 const Header = () => {
     const [open, setOpen] = useState(false);
   return (
     <Container open={open}>
-        <Logo>
-            <Image src="https://res.cloudinary.com/ghazni/image/upload/v1648192603/nft-clone/logo_gid5bs.png" alt="logo"/>
-            <h1>GBaby NFT’s</h1>
-        </Logo>
+        <motion.div 
+        variants= {animations}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{duration : 0.5, delay : 0.6}}>
+            <Logo>
+                <Image src="https://res.cloudinary.com/ghazni/image/upload/v1648192603/nft-clone/logo_gid5bs.png" alt="logo"/>
+                <h1>GBaby NFT’s</h1>
+            </Logo>
+        </motion.div >
+        <motion.div 
+        variants= {animations}
+        initial="secondInitial"
+        animate="secondAnimate"
+        exit="secondExit"
+        transition={{duration : 0.5, delay : 0.8}}>
         <Nav open={open}>
             <span>FAQ</span>
             <span>ROADMAP</span>
@@ -17,6 +40,7 @@ const Header = () => {
         <Bar open={open} onClick={() => setOpen(!open)}>
             <div className="line"></div>
         </Bar>
+        </motion.div>
         <div className="background"></div>
     </Container>
   )

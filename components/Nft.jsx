@@ -5,16 +5,21 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import { EffectCoverflow, Navigation } from "swiper";
+import { Fade, Flip, Zoom } from "react-reveal";
 
 export default function Nft() {
   return (
     <Container>
       <div className='shadow'></div>
-      <Image 
-      src="https://res.cloudinary.com/ghazni/image/upload/v1648192610/nft-clone/slider-fire_dnqj8x.png" alt="fire"/>
+        <Image 
+        src="https://res.cloudinary.com/ghazni/image/upload/v1648192610/nft-clone/slider-fire_dnqj8x.png" alt="fire"/>
     <Texts>
-        <h1>NFT's</h1>
+        <Flip>
+          <h1>NFT's</h1>
+        </Flip>
+      <Zoom>
         <p>3333 unique nfts will be available upon launch using solana network. The price will be 0.25 SOL per NFT on launch.</p>
+      </Zoom>
     </Texts>
       <Slider>
       <Swiper
@@ -71,6 +76,9 @@ top: -2rem;
   width: 75%;
   padding-top: 50px;
   padding-bottom: 50px;
+  @media(max-width : 1196px){
+    width: 80%;
+  }
   @media(max-width : 490px){
     width: 100%;
   }
@@ -96,7 +104,7 @@ top: -2rem;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
-  @media(max-width : 800px){
+  @media(max-width : 1124px){
     display: none;
   }
 }
@@ -105,7 +113,7 @@ top: -2rem;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
-  @media(max-width : 800px){
+  @media(max-width : 1124px){
     display: none;
   }
 }

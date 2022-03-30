@@ -3,12 +3,28 @@ import styled from 'styled-components';
 import Header from './Header';
 import SwipSlider from './SwipSlider';
 import Timer from './Timer';
+import { motion } from "framer-motion";
+
+const animations = {
+    initial : {opacity : 0, scale :0},
+    animate : {opacity : 1, scale : 1},
+    exit : {opacity : 0, scale : -1},
+    secondInitial : {opacity : 0, x :-20},
+    secondAnimate : {opacity : 1, x : 0},
+    secondExit : {opacity : 0, x : 20}
+}
 
 const Banner = () => {
   return (
     <Container>
         <Header/>
         <Flex>
+        <motion.div 
+        variants= {animations}
+        initial="secondInitial"
+        animate="secondAnimate"
+        exit="secondExit"
+        transition={{duration : 1, delay : 1}}>
             <Texts>
                 <Image src="https://res.cloudinary.com/ghazni/image/upload/v1648192609/nft-clone/soon_guab8h.png" alt="nft"/>
                 <h1>Launching Soon</h1>
@@ -17,8 +33,16 @@ const Banner = () => {
                 <h2>Launching Date </h2>
                 <Timer/>
             </Texts>
+        </motion.div>
             <Slider>
+            <motion.div 
+            variants= {animations}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{duration : 1, delay : 1.4}}>
                 <SwipSlider/>
+            </motion.div>
             </Slider>
         </Flex>
     </Container>
