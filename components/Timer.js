@@ -7,31 +7,34 @@ const animations = {
     animate : {opacity : 1},
     exit : {opacity : 0,},
 }
-
+let interval;
 const Timer = () => {
-    const [second, setSecond] = useState("00");
-    const [minute, setMinute] = useState("00");
-    const [hour, setHour] = useState("00");
-    const [day, setDay] = useState("00");
+    const [second, setSecond] = useState("0");
+    const [minute, setMinute] = useState("0");
+    const [hour, setHour] = useState("0");
+    const [day, setDay] = useState("0");
     const time = () => {
-        const getTimer = new Date("apr,3, 2022 00:00:00").getTime();
-        const now = new Date().getTime();
-        const gap = getTimer - now;
-    
-        const second = 1000;
-        const minute = second * 60;
-        const hour = minute * 60;
-        const day = hour * 24;
-        
-        setDay(Math.floor(gap / day));
-        setHour(Math.floor((gap % day) / hour));
-        setMinute(Math.floor((gap % hour) / minute));
-        setSecond(Math.floor((gap % minute) / second));
+        const getTimer = new Date("apr,10, 2022 00:00:00").getTime();
+        interval = setInterval(() => {
+            const now = new Date().getTime();
+            const gap = getTimer - now;
+            
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+            if(gap < 0){
+                clearInterval(interval.current)
+            }else{
+                setDay(Math.floor(gap / day));
+                setHour(Math.floor((gap % day) / hour));
+                setMinute(Math.floor((gap % hour) / minute));
+                setSecond(Math.floor((gap % minute) / second));
+            }
+        },1000)
     }
     useEffect(() => {
-        setInterval(() => {
-            time();
-        }, 1000);
+        time();
     })
 
     const getZero = (num) => {
