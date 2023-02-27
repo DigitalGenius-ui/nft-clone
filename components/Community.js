@@ -8,7 +8,7 @@ const Community = () => {
       <div className='shadow'></div>
       <Img src={"https://res.cloudinary.com/ghazni/image/upload/v1648192602/nft-clone/banner-world_rh07oz.png"}alt="earth"/></Fade>
       <Img className='community__cloud'
-      src={"https://res.cloudinary.com/ghazni/image/upload/v1648192610/nft-clone/water_gdcpjw.png"}alt="cloud"/></Fade>
+      src={"https://res.cloudinary.com/ghazni/image/upload/v1648192610/nft-clone/water_gdcpjw.png"}alt="cloud"/>
       <Content>
         <Flip>
           <h1><span>GBaby</span> Community Benefits </h1>
