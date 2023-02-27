@@ -1,14 +1,12 @@
 import Image from 'next/image';
-import { Fade, Flip } from 'react-reveal';
+import { Flip } from 'react-reveal';
 import styled from 'styled-components';
 
 const Community = () => {
   return (
     <Container>
       <div className='shadow'></div>
-      <Fade>
       <Img src={"https://res.cloudinary.com/ghazni/image/upload/v1648192602/nft-clone/banner-world_rh07oz.png"}alt="earth"/></Fade>
-      <Fade>
       <Img className='community__cloud'
       src={"https://res.cloudinary.com/ghazni/image/upload/v1648192610/nft-clone/water_gdcpjw.png"}alt="cloud"/></Fade>
       <Content>
